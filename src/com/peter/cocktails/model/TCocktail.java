@@ -66,6 +66,18 @@ public class TCocktail implements Serializable{
 	public void setUrl(String url) {
 		this.url = url;
 	}
+
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+	
+	public void reset() {
+		this.cocktailId = 1L;
+	}
+	
 	
 	
 	

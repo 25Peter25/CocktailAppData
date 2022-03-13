@@ -18,10 +18,10 @@ import javax.persistence.Table;
 public class TIngredient implements Serializable {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "t_ingredients_seq")
-	@SequenceGenerator(name = "t_ingredients_seq", sequenceName = "co.t_ingredients_ingredients_id_seq", initialValue=0, allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ingredients_seq")
+	@SequenceGenerator(name = "ingredients_seq", sequenceName = "co.ingredients_ingredient_id_seq", initialValue=0, allocationSize = 1)
 	@Column (name = "ingredient_id", nullable = false)
-	private Long cocktail_id;
+	private Long ingredientId;
 	
 	@Column (name = "name", nullable = false)
 	private String name;
@@ -32,13 +32,13 @@ public class TIngredient implements Serializable {
 	}
 
 
-	public Long getCocktail_id() {
-		return cocktail_id;
+	public Long getIngredientId() {
+		return ingredientId;
 	}
 
 
 	public void setCocktail_id(Long cocktail_id) {
-		this.cocktail_id = cocktail_id;
+		this.ingredientId = cocktail_id;
 	}
 
 
@@ -50,6 +50,11 @@ public class TIngredient implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public void reset() {
+		this.ingredientId = 1L;
+	}
+	
 	
 	
 	
